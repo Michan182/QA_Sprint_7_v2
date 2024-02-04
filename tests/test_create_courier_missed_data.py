@@ -16,7 +16,8 @@ class TestCreateCourierMissedData:
                                  ("", "", "")
                              ]
                              )
-    @allure.title('Check authorisation status code with missed data')
+    @allure.story('Check authorisation status code with missed data')
+    @allure.title('Test create courier with missing data and check status code')
     def test_create_user_status_code_with_not_all_data(self, login, password, firstName):
         negative_auth_data = {'login': login, 'password': password,
                               'firstName': firstName}
@@ -33,7 +34,8 @@ class TestCreateCourierMissedData:
                                  ("", "", "")
                              ]
                              )
-    @allure.title('Check authorisation error message with missed data ')
+    @allure.story('Check authorisation error message with missed data')
+    @allure.title('Test create courier with missing data and check error message')
     def test_create_user_error_message_with_not_all_data(self, login, password,
                                                          firstName):
         negative_auth_data = {'login': login, 'password': password,
